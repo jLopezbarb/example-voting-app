@@ -59,7 +59,7 @@ forward:
 
 ### Result
 
-This Okteto manifests uses the Okteto development node image to access the container bash and run the application from inside the container.
+This Okteto manifests uses the Okteto development node image to access the container bash and run the application from inside the container. 
 
 ```yaml
 name: result
@@ -75,7 +75,7 @@ forward:
   - 5002:4000
   - 9229:9229
 ```
-
+With this manifest *okteto up* will open a bash where you can launch the server with the command *nodemon server.js* to re-launch app if any changes are made.
 
 
 ## Connection with Okteto Kubernetes API via Go and Python
