@@ -1,0 +1,11 @@
+name: vote
+labels:
+  app: vote
+emptyimage: false
+image: dockersamples/examplevotingapp_vote:before
+command: ["gunicorn", "app:app", "-b", "0.0.0.0:80", "--log-file", "-", "--access-logfile", "-", "--workers", "4", "--keep-alive", "0", "--reload"]
+workdir: /app
+sync:
+  - .:/app
+forward:
+  - 5001:80

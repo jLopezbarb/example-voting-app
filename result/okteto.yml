@@ -1,0 +1,16 @@
+name: result
+labels:
+  app: result
+emptyimage: false
+image: okteto/node:12
+command: bash
+workdir: /app
+sync:
+  - .:/app
+forward:
+  - 5002:4000
+  - 9229:9229
+resources:
+  limits:
+    cpu: "1"
+    memory: 2Gi
