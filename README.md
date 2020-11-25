@@ -103,7 +103,7 @@ pip install -r scripts/requirements.txt
 To run script you just need to run
 
 ```bash
-python scripts/okteto_usage.py
+python scripts/okteto_usage.py YOUR_NAMESPACE
 ```
 
 The output generated should be something like:
@@ -137,7 +137,7 @@ vote-7c9d6ff5d4-xvsrr => Number of containers in pod: 1
 For go we just need to run the script and it will build downloading all the modules that needs to work.
 
 ```
-go run scripts/okteto_usage.go
+go run scripts/okteto_usage.go YOUR_NAMESPACE
 ```
 
 The output for this execution should be something like:

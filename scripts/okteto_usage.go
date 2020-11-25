@@ -36,9 +36,9 @@ func main() {
 	var config *rest.Config
 	var namespace string
 	var pods metricstype.PodMetricsList
-
+	namespace = os.Args[1]
 	config = getConfig()
-	namespace = "jlopezbarb"
+	
 
 	pods = getRawMetrics(config, namespace)
 

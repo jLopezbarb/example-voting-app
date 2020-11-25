@@ -1,6 +1,6 @@
 import re
 from typing import Tuple, Iterable
-
+import sys
 from kubernetes.config import load_kube_config
 from kubernetes.client import CustomObjectsApi
 
@@ -108,6 +108,6 @@ def __get_pods_metrics_from_response(results: dict) -> Iterable[PodMetrics]:
 if __name__ == '__main__':
     load_kube_config()
     custom_api = CustomObjectsApi()
-    results = custom_api.list_namespaced_custom_object('metrics.k8s.io', 'v1beta1', 'jlopezbarb', 'pods')
+    results = custom_api.list_namespaced_custom_object('metrics.k8s.io', 'v1beta1', sys.argv[1], 'pods')
     for pod in __get_pods_metrics_from_response(results):
         print(pod)
