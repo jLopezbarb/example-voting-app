@@ -1,6 +1,5 @@
 # Playing with Okteto 
 
-[TOC]
 
 This repository contains all the resources to deploy a simple microservices based application  with Okteto. 
 
